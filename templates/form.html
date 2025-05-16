@@ -1,0 +1,36 @@
+{% extends 'base.html' %} {% block conteudo %}
+<form method="post">
+  <div class="mb-3">
+    <label>Nome</label>
+    <input
+      type="text"
+      name="nome"
+      class="form-control"
+      value="{{ usuario.nome or '' }}"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label>Email</label>
+    <input
+      type="email"
+      name="email"
+      class="form-control"
+      value="{{ usuario.email or '' }}"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label>Senha</label>
+    <input
+      type="password"
+      name="senha"
+      class="form-control"
+      value="{{ usuario.senha or '' }}"
+      required
+    />
+  </div>
+  <button type="submit" class="btn btn-success">Salvar</button>
+  <a href="/" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}
